@@ -3,10 +3,13 @@ let Post = require('../models/post.model');
 let Comment = require('../models/comment.model');
 
 // Get all posts
-postsRouter.route('/').get((req, res) => {
-  Post.find()
-    .then((posts) => res.json(posts))
-    .catch((err) => res.status(400).json('Error: ' + err));
+postsRouter.route('/').get(async (req, res) => {
+  try {
+    const post = await Post.find();
+    res.send(post);
+  } catch (err) {
+    res.status(400).json('Error: ' + err);
+  }
 });
 
 // Add new post

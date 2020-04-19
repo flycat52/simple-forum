@@ -1,16 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-var dotenvExpand = require('dotenv-expand');
 
-dotenvExpand(dotenv.config());
+require('dotenv').config({ path: '../.env' });
 
 const postsRouter = require('./routes/posts');
 const usersRouter = require('./routes/users');
 
 const app = express();
-const port = process.env.PORT || 5050;
+const port = process.env.REACT_APP_NODE_PORT || 5051;
 
 // middleware
 app.use(cors());
