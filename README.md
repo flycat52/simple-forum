@@ -20,19 +20,19 @@ SECRET_KEY=(ANY STRING VALUE)
 
 In the project directory, you can run:
 
-### `npm install`
+`npm install`
 
 ## Run client side
 
-### `npm start`
+`npm start`
 
 ## Run server
 
 In the project server directory(>cd server), you need to run:
 
-### `npm install`
+`npm install`
 
-### `npm start`
+`npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -44,12 +44,12 @@ You will also see any lint errors in the console.
 
 In the project directory, and run
 
-### `npm test`
+`npm test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+`npm build`
 
 Builds the app for production to the `build` folder.<br />
 
@@ -59,7 +59,7 @@ Builds the app for production to the `build` folder.<br />
 - Sign up user
 - User login
 
-## Server side API implementaion (port:5051)
+## Server side API implementaion
 
 - `GET /users` Get list of users
 - `POST /users/signup` Create new user
