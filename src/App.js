@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import Navigation from './components/Navigation.component';
+import PostCollection from './components/PostCollection.component';
+import SignUp from './components/SignUp.component';
+import Login from './components/Login.component';
+// import NewPost from './components/NewPost.component';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Container>
+        <Navigation />
+        <br />
+        <Route path="/" exact component={PostCollection} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/login" component={Login} />
+        {/* <Route path="/post/new" component={NewPost} /> */}
+      </Container>
+    </BrowserRouter>
   );
 }
 
